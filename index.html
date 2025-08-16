@@ -4,36 +4,40 @@
     <link rel="stylesheet" href="Css/bootstrap.min.css">
     <link rel="stylesheet" href="Css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-    <title>demos.wp-guppy.com</title>
+    <link rel="icon" type="image/svg+xml" href="Svg/logo_white-1.svg">
+    <title>Tuturn</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-    <header>
-        <div class="container-fulid">
-            <div class="row">
-                <div class="col-sm-6 col-md-6 col-lg-12">
-                   <div class="tuturn">
-                    <div class="tuturn-img">
-                        <strong>
-                            <img src="Svg/logo_white-1.svg" alt="">
-                        </strong>
-                    </div>
-                    <div class="tuturn-list">
-                        <ul>
-                            <li><a href="">Home</a></li>
-                            <li><a href="">How it work</a></li>
-                            <li><a href="">Find instructors</a></li>
-                            <li><a href="">Pages</a></li>
-                            <li><a href="">Contact Us</a></li>
-                            <div class="tuturn-btn">
-                                <button>Get Started</button>
-                            </div>
-                        </ul>
-                    </div>
-                   </div>
+     <header>
+        <div class="tuturn">
+            <div class="tuturn-img-navbar">
+                <div class="tuturn-img">
+                    <strong>
+                        <img src="Svg/logo_white-1.svg" alt="Tuturn">
+                    </strong>
+                </div>
+                <!-- Navbar Toggle Button -->
+                <button class="navbar-toggle" id="navbarToggle" aria-label="Toggle navigation">
+                    <span class="fa fa-bars tuturn-menu-icon"></span>
+                </button>
+            </div>
+            <div class="tuturn-list" id="navbarMenu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">How it work</a></li>
+                    <li><a href="">Find instructors</a></li>
+                    <li><a href="">Pages</a></li>
+                    <li><a href="">Contact Us</a></li>
+                </ul>
+                <div class="tuturn-btn responsive-btn">
+                    <button>Get Started</button>
                 </div>
             </div>
         </div>
     </header>
+    <script src="script.js"></script>
+ 
     <section class="banner">
         <div class="container">
             <div class="row">
@@ -92,7 +96,7 @@
                 <div class="col-lg-12">
                     <div class="papolation-search">
                         <h5>Popular searches:</h5>
-                        <ul>
+                        <ul class="popular-searches-list">
                             <li><a href="">Graduation,</a></li>
                             <li><a href="">Health & sports,</a></li>
                             <li><a href="">Spoken languages</a></li>
@@ -197,8 +201,7 @@
                         </div>
                     </div>
                     <div class="button">
-                        <a href="">join our comminity</a>
-                        <a href=""><i class="fa-solid fa-lock" style="color: #FFFF;"></i></a>
+                        <a href="">join our comminity <i class="fa-solid fa-lock" style="color: #FFFF;"></i></a>
                     </div>
                 </div>
             </div>
@@ -261,25 +264,6 @@
                 </div>
             </div>
         </div>
-        <script>
-            const counters = document.querySelectorAll(".count");
-            const speed = 200;
-            counters.forEach((counter) => {
-              const updateCount = () => {
-                const target = parseInt(+counter.getAttribute("data-target"));
-                const count = parseInt(+counter.innerText);
-                const increment = Math.trunc(target / speed);
-                console.log(increment);
-                if (count < target) {
-                  counter.innerText = count + increment;
-                  setTimeout(updateCount, 1);
-                } else {
-                  count.innerText = target;
-                }
-              };
-              updateCount();
-            });
-          </script>
     </section>
     <section class="visited-categories">
         <div class="container">
@@ -300,23 +284,27 @@
         </div>
     </section>
     <section class="visited-categories">
-       <div class="visited-categories-main">
-        <figure>
-            <img src="Image/baisc-primary-480x700.jpg" alt="">
-        </figure>
-        <figure>
-            <img src="Image/o-a-Levels-480x700.jpg" alt="">
-        </figure>
-        <figure>
-            <img src="Image/Graduation-480x700.jpg" alt="">
-        </figure>
-        <figure>
-            <img src="Image/arts-music-480x700.jpg" alt="">
-        </figure>
-        <figure>
-            <img src="Image/Health-sports-480x700.jpg" alt="">
-        </figure>
-       </div>
+        <div class="container">
+            <div class="col-lg-12">
+                <div class="visited-categories-main">
+          <figure>
+              <img src="Image/baisc-primary-480x700.jpg" alt="">
+          </figure>
+          <figure>
+              <img src="Image/o-a-Levels-480x700.jpg" alt="">
+          </figure>
+          <figure>
+              <img src="Image/Graduation-480x700.jpg" alt="">
+          </figure>
+          <figure>
+              <img src="Image/arts-music-480x700.jpg" alt="">
+          </figure>
+          <figure>
+              <img src="Image/Health-sports-480x700.jpg" alt="">
+          </figure>
+        </div>
+      </div>
+    </div>
        <div class="splid-sliderbutton">
         <a href=""><span>Let’s make a quick start today ></span></a>
       </div>
@@ -815,6 +803,7 @@
                          <div class="foooter-link">
                             <div class="footer-link-title">
                                 <h2>Usefull Link</h2>
+                            </div>
                             <div class="footer-link-heading">
                                 <ul>
                                     <li><a href=""><em>.</em>About</a></li>
