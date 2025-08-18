@@ -1,48 +1,57 @@
-
-.heading h1 {
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin-bottom: 16px;
-    line-height: 1.2;
-}
-.heading h1 em {
-    color: #ff9800;
-    font-style: normal;
-}
-.heading p {
-    font-size: 1.25rem;
-    color: #555;
-    margin-bottom: 0;
-}
-@media (max-width: 991px) {
-    .heading {
-        margin: 32px 0 18px 0;
-        text-align: center;
+@media (max-width: 576px) {
+    .papolation-search ul {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        gap: 0 !important;
     }
-    .heading h1 {
-        font-size: 2rem;
+    .papolation-search ul li {
+        flex: 0 1 auto !important;
+        padding: 0 10px 0 0 !important;
+        display: flex !important;
+        align-items: center !important;
     }
-    .heading p {
-        font-size: 1.1rem;
+    .papolation-search ul li:nth-child(1),
+    .papolation-search ul li:nth-child(2) {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        width: auto !important;
+        
+    }
+    .papolation-search ul li:nth-child(3) {
+        flex-wrap: wrap !important;
+        width: 100% !important;
+        padding-right: 0 !important;
+    }
+}
+@media (max-width: 576px) {
+    .popular-searches-list {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    .popular-searches-list li {
+        flex: 0 1 auto;
+        padding: 0;
+    }
+    .popular-searches-list li:nth-child(1),
+    .popular-searches-list li:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .popular-searches-list li:nth-child(3) {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
     }
 }
 @media (max-width: 576px) {
     .heading {
-        margin: 18px 0 10px 0;
-        padding: 0 8px;
-        text-align: center;
-    }
-    .heading h1 {
-        font-size: 1.2rem;
-        margin-bottom: 10px;
-    }
-    .heading p {
-        font-size: 0.95rem;
+        margin-top: 250px;
     }
 }
-/* Only keep the working and necessary CSS for navbar and layout. Remove duplicates and unused code. */
 
-/* --- Responsive Online-education-control Section --- */
 .Online-education-control .education-main {
     display: flex;
     flex-direction: row;
@@ -262,10 +271,10 @@ header {
     text-align: center;
   }
 }
-
 .banner{
     background-color: #1C1C1C;
 }
+
 .heading h1{
     color: #FFFFFF;
     margin:0;
@@ -393,6 +402,32 @@ display:flex;
     color: #FFFFFF;
     text-decoration: none;
 }
+
+
+/* Popular searches flex row by default */
+.popular-searches-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+}
+.popular-searches-list li {
+    list-style: none;
+}
+
+/* Responsive: stack vertically on small screens */
+@media (max-width: 768px) {
+    .popular-searches-list {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 12px;
+    }
+    .popular-searches-list li {
+        padding: 6px 0 0 0;
+    }
+}
+
 .education strong{
     padding:100px 0 0 0;
     display: flex;
